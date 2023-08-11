@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+  margin: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+html,
+body {
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0 auto;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  justify-content: center;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+   max-width: 1400px;
+   border: 1px solid #000000;
+   margin: 0 auto;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.align-center {
+    align-items: center;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+
+  /* ---------------- */
+
+  /* ------------------ */
+
+  .head-wrapper{
+    min-height: 129%;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.head{
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 11vh;
+    border-bottom: 1px solid #000000;
+}
+
+.head-navigation{
+    width: 100%;
+    padding-top: 39px;
+    padding: 39px 10px 0;
+    
+}
+
+.links{
+    padding: 0;
+    margin-top: 75px;
+    list-style-type: none;
+    height: 24px;
+    align-items: center;
+}
+
+.links li + li{
+    padding-left: 80px;
+}
+
+.links a{
+    padding: 10px;
+    text-decoration: none;
+    color: #222222;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+}
+
+.links a:hover{
+    border: 2px solid #CFFD3C;
+}
+
+.links button{
+    width: 157px;
+    height: 52px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21.6px;
+    color: #ffffff;
+    background-color: #FB4B4D;
+    border: none;
+    cursor: pointer;
+}
+
+/* ------------------- */
+
+.grid_first_images{
+    width: 50%;
+    height: 20vh;
+    background-image: url('./images/image-grid-text.png');
+    background-size: contain;
+}
+
+.grid_first_line{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line_image{
+    width: 10%;
+    background-image: url('./images/IMAGE.png');
+    background-size: contain;
+}
